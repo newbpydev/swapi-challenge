@@ -40,8 +40,7 @@ export default {
 }
 
 .stars {
-  background: var(--prim-color-v-dark-gray)
-    url(../assets/background-images/stars.png) repeat top center;
+  background: #000 url(../assets/background-images/stars.png) repeat top center;
   z-index: -11;
 }
 .twinkling {
