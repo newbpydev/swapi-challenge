@@ -1,6 +1,8 @@
 <template>
-  <h1>Star Wars</h1>
-  <h2>Data Base</h2>
+  <div class="container">
+    <h1>Star Wars</h1>
+    <h2>Data Base</h2>
+  </div>
 </template>
 
 <script>
@@ -14,8 +16,14 @@ export default {
   font-family: DeathStar;
   src: url(../assets/fonts/DeathStar-VmWB.ttf);
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 h1,
 h2 {
+  margin-top: 0.8rem;
   font-family: DeathStar;
   color: black;
   -webkit-text-stroke: 0.01rem var(--prim-color-yellow);
@@ -23,6 +31,8 @@ h2 {
 
 h1 {
   font-size: 5.2rem;
+  border-bottom: 0.2rem solid var(--prim-color-yellow);
+  width: fit-content;
 }
 
 h2 {
