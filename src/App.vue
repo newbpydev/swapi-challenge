@@ -1,26 +1,26 @@
 <template>
   <background-effect></background-effect>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <header-component></header-component>
+  <!-- <header-component></header-component> -->
   <home-view></home-view>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import HeaderComponent from '@/components/HeaderComponent'
+// import HeaderComponent from '@/components/HeaderComponent'
 import BackgroundEffect from '@/components/BackgroundEffect'
 
-import HomeView from '@/views/HomeView'
+import HomeView from "@/views/HomeView";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    HeaderComponent,
+    // HeaderComponent,
     BackgroundEffect,
-    HomeView
-  }
-}
+    HomeView,
+  },
+};
 </script>
 
 <style>
@@ -49,17 +49,17 @@ export default {
       - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
       - Weights: 400, 700
 */
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 /*! Variables  */
 :root {
   --prim-color-v-dark-gray: rgb(6, 6, 6);
   --prim-color-v-dark-desa-blue: hsl(229, 23%, 23%);
-  --prim-color-yellow: #FFE81F;
+  --prim-color-yellow: #ffe81f;
   --neut-color-gray: hsl(0, 0%, 59%);
 
   --font-size-name-stats: 1.8rem;
-  
+
   --border-radius: 1rem;
 }
 
@@ -86,7 +86,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   position: relative; */
-  
+
   /* overflow: hidden; */
   background-color: var(--prim-color-v-dark-gray);
 }
