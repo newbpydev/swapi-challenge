@@ -1,7 +1,9 @@
 <template>
   <header-component></header-component>
 
-  <card-list></card-list>
+  <main>
+    <card-list></card-list>
+  </main>
 </template>
 
 <script>
@@ -20,4 +22,8 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+main {
+  
+}
+</style>

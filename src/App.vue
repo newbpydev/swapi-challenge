@@ -90,6 +90,10 @@ body {
   /* overflow: hidden; */
   background-color: var(--prim-color-v-dark-gray);
 }
+@font-face {
+  font-family: DeathStar;
+  src: url(./assets/fonts/DeathStar-VmWB.ttf);
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

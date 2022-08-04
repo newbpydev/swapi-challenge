@@ -12,10 +12,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-@font-face {
-  font-family: DeathStar;
-  src: url(../assets/fonts/DeathStar-VmWB.ttf);
-}
+
 .container {
   display: flex;
   flex-direction: column;

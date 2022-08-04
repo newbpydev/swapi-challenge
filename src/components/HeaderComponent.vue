@@ -1,5 +1,7 @@
 <template>
-  <logo-component></logo-component>
+  <header>
+    <logo-component></logo-component>
+  </header>
 </template>
 
 <script>
@@ -16,4 +18,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+header {
+  margin-bottom: 10rem
+}
+</style>
