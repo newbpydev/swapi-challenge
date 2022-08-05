@@ -1,5 +1,7 @@
 <template>
   <background-effect></background-effect>
+
+  <header-component></header-component>
   <main>
     <router-view></router-view>
   </main>
@@ -7,12 +9,14 @@
 
 <script>
 import BackgroundEffect from "@/components/BackgroundEffect";
+import HeaderComponent from "@/components/HeaderComponent";
 
 export default {
   name: "App",
 
   components: {
     BackgroundEffect,
+    HeaderComponent,
   },
 };
 </script>
@@ -64,7 +68,6 @@ export default {
   box-sizing: border-box;
 }
 
-
 html {
   font-size: 10px;
 }
@@ -108,9 +111,12 @@ main {
   /* display: flex;
   justify-content: center; */
   /* align-items: center; */
-  
+
   gap: 1rem;
   color: #2c3e50;
   margin-top: 60px;
+}
+a {
+  text-decoration: none;
 }
 </style>

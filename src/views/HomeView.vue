@@ -1,5 +1,5 @@
 <template>
-  <header-component></header-component>
+  <!-- <header-component></header-component> -->
 
   <card-list :menuItems="menuItems"></card-list>
 </template>
@@ -24,11 +24,10 @@ export default {
 
   beforeRouteEnter(routeTo, routeFrom, next) {
     StarWarsService.getRoot().then((response) => {
-      console.log(response);
-      console.log(routeTo, routeFrom);
+      // console.log(response);
+      // console.log(routeTo, routeFrom);
       next((component) => {
         component.menuItems = response.data;
-        // console.log(component.menuItems);
       });
     });
   },

@@ -1,31 +1,11 @@
 <template>
   <div class="card-list--grid">
-    <!-- <base-card
-      title="characters"
-      imgUrl="https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg"
-    ></base-card>
     <base-card
-      title="films"
-      imgUrl="https://www.stevensegallery.com/640/360"
+      v-for="item in items"
+      :key="item"
+      :url="item"
+      :cardObj="menuItems"
     ></base-card>
-    <base-card
-      imgUrl="https://www.stevensegallery.com/640/360"
-      title="species"
-    ></base-card>
-    <base-card
-      imgUrl="https://www.stevensegallery.com/640/360"
-      title="vehicles"
-    ></base-card>
-    <base-card
-      imgUrl="https://www.stevensegallery.com/640/360"
-      title="starships"
-    ></base-card>
-    <base-card
-      imgUrl="https://www.stevensegallery.com/640/360"
-      title="worlds"
-    ></base-card> -->
-
-    <base-card v-for="item in items" :key="item" :title="item">{{ item }}</base-card>
   </div>
 </template>
 
@@ -49,12 +29,13 @@ export default {
 
   watch: {
     menuItems(val) {
+      console.log(val);
       this.items = Object.keys(val);
       console.log(this.items);
     },
   },
 };
-BaseCard;
+// BaseCard;
 </script>
 
 <style lang="css" scoped>

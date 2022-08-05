@@ -1,8 +1,10 @@
 <template>
-  <div class="container">
-    <h1>Star Wars</h1>
-    <h2>Data Base</h2>
-  </div>
+  <router-link :to="{ name: 'HomeView' }">
+    <div class="container">
+      <h1>Star Wars</h1>
+      <h2>Data Base</h2>
+    </div>
+  </router-link>
 </template>
 
 <script>
@@ -12,7 +14,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 .container {
   display: flex;
   flex-direction: column;
