@@ -3,6 +3,7 @@ import NProgress from "nprogress";
 
 import HomeView from "@/views/HomeView";
 import ResultsView from "@/views/ResultsView";
+import DetailsView from "@/views/DetailsView";
 
 import GStore from "@/store";
 
@@ -31,6 +32,20 @@ const routes = [
         .catch((error) => {
           console.log(error);
         });
+    },
+  },
+  {
+    //* DetailsView
+    path: "/:type/:id",
+    name: "DetailsView",
+    component: DetailsView,
+    beforeEnter: (to) => {
+      return StarWarsService.getOne(to.params.type, to.params.id).then(
+        (res) => {
+          GStore.details = res.data;
+          console.log(res.data);
+        }
+      );
     },
   },
 ];

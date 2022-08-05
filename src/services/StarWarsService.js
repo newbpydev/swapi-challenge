@@ -10,6 +10,13 @@ const apiClient = axios.create({
   },
 });
 
+// const apiTest = axios.create({
+//   baseURL:
+//     "https://en.wikipedia.org/w/api.php?origin=*&action=parse&page=Luke_skywalker&format=json",
+//   withCredentials: false,
+//   headers: { accept: "application/json", "Content-Type": "aplication/json" },
+// });
+
 export default {
   getRoot() {
     return apiClient.get();
@@ -17,7 +24,10 @@ export default {
   getAll(category) {
     return apiClient.get(`/${category}/`);
   },
-  // getOne(category, id) {
-
-  // }
+  getOne(category, id) {
+    return apiClient.get(`/${category}/${id}`);
+  },
+  // getTest() {
+  //   return apiTest.get();
+  // },
 };
