@@ -1,24 +1,18 @@
 <template>
   <background-effect></background-effect>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-  <!-- <header-component></header-component> -->
-  <home-view></home-view>
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-// import HeaderComponent from '@/components/HeaderComponent'
-import BackgroundEffect from '@/components/BackgroundEffect'
-
-import HomeView from "@/views/HomeView";
+import BackgroundEffect from "@/components/BackgroundEffect";
 
 export default {
   name: "App",
 
   components: {
-    // HeaderComponent,
     BackgroundEffect,
-    HomeView,
   },
 };
 </script>
@@ -70,6 +64,7 @@ export default {
   box-sizing: border-box;
 }
 
+
 html {
   font-size: 10px;
 }
@@ -82,14 +77,24 @@ body {
 
   /* display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  justify-content: center; */
+  /* min-height: 100vh;
   min-width: 100vw;
   position: relative; */
 
   /* overflow: hidden; */
   background-color: var(--prim-color-v-dark-gray);
 }
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
 @font-face {
   font-family: DeathStar;
   src: url(./assets/fonts/DeathStar-VmWB.ttf);
@@ -100,6 +105,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  /* display: flex;
+  justify-content: center; */
+  /* align-items: center; */
+  
+  gap: 1rem;
   color: #2c3e50;
   margin-top: 60px;
 }

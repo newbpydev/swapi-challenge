@@ -1,29 +1,38 @@
 <template>
   <header-component></header-component>
 
-  <main>
-    <card-list></card-list>
-  </main>
+  <card-list :menuItems="menuItems"></card-list>
 </template>
 
 <script>
 import HeaderComponent from "@/components/HeaderComponent";
-
 import CardList from "@/components/CardList.vue";
+import StarWarsService from "@/services/StarWarsService";
 
 export default {
+  name: "HomeView",
   components: {
     HeaderComponent,
-
     CardList,
   },
 
-  name: "HomeView",
+  data() {
+    return {
+      menuItems: null,
+    };
+  },
+
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    StarWarsService.getRoot().then((response) => {
+      console.log(response);
+      console.log(routeTo, routeFrom);
+      next((component) => {
+        component.menuItems = response.data;
+        // console.log(component.menuItems);
+      });
+    });
+  },
 };
 </script>
 
-<style lang="css" scoped>
-main {
-  
-}
-</style>
+<style lang="css" scoped></style>

@@ -16,7 +16,7 @@ export default {
     },
     imgUrl: {
       type: String,
-      default: "",
+      default: "https://vignette.wikia.nocookie.net/fr.starwars/images/3/32/Dark_Vador.jpg",
     },
   },
 };
