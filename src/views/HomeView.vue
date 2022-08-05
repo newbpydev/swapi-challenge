@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import HeaderComponent from "@/components/HeaderComponent";
+// import HeaderComponent from "@/components/HeaderComponent";
 import CardList from "@/components/CardList.vue";
 import StarWarsService from "@/services/StarWarsService";
 
 export default {
   name: "HomeView",
   components: {
-    HeaderComponent,
+    // HeaderComponent,
     CardList,
   },
 

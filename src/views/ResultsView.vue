@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import HeaderComponent from "@/components/HeaderComponent";
+// import HeaderComponent from "@/components/HeaderComponent";
 import ResultsList from "@/components/ResultsList.vue";
 // import StarWarsService from "@/services/StarWarsService";
 
 export default {
   name: "ResultsView",
   components: {
-    HeaderComponent,
+    // HeaderComponent,
     ResultsList,
   },
 
