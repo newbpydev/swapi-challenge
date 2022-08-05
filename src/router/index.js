@@ -2,8 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 import NProgress from "nprogress";
 
 import HomeView from "@/views/HomeView";
+import ResultsView from "@/views/ResultsView";
 
-// import GStore from "@/store";
+import GStore from "@/store";
+
+import StarWarsService from "@/services/StarWarsService";
 
 //# ROUTES         |
 const routes = [
@@ -12,6 +15,23 @@ const routes = [
     path: "/",
     name: "HomeView",
     component: HomeView,
+  },
+  {
+    //* ResultsView
+    path: "/:type",
+    name: "ResultsView",
+    component: ResultsView,
+    // props: true,
+    beforeEnter: (to) => {
+      return StarWarsService.getAll(to.params.type)
+        .then((response) => {
+          GStore.results = response.data;
+          // console.log(GStore);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 ];
 
