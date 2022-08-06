@@ -30,8 +30,8 @@
       :description="consumables"
     ></base-text-output>
     <base-text-output
-      label="Vehicle Class"
-      :description="vehicleClass"
+      label="Starship Class"
+      :description="starshipClass"
     ></base-text-output>
   </div>
 </template>
@@ -42,7 +42,7 @@ import BaseTextTitle from "./BaseTextTitle.vue";
 
 export default {
   components: { BaseTextOutput, BaseTextTitle },
-  name: "VehiclesPaneDetail",
+  name: "StarshipsPaneDetail",
 
   inject: ["GStore"],
 
@@ -58,7 +58,9 @@ export default {
       passengers: this.GStore.details.passengers,
       cargoCapacity: this.GStore.details.cargo_capacity,
       consumables: this.GStore.details.consumables,
-      vehicleClass: this.GStore.details.vehicle_class,
+      hyperdriveRating: this.GStore.details.hyperdrive_rating,
+      mglt: this.GStore.details.MGLT,
+      starshipClass: this.GStore.details.starship_class,
     };
   },
 };

@@ -9,6 +9,9 @@
       <vehicles-pane-detail
         v-if="routeType === 'vehicles'"
       ></vehicles-pane-detail>
+      <starships-pane-detail
+        v-if="routeType === 'starships'"
+      ></starships-pane-detail>
 
       <related-details
         v-if="relatedLists.films"
@@ -70,6 +73,8 @@ import FilmsPaneDetail from "@/components/details/info-pane/FilmsPaneDetail.vue"
 import SpeciesPaneDetail from "@/components/details/info-pane/SpeciesPaneDetail.vue";
 import VehiclesPaneDetail from "@/components/details/info-pane/VehiclesPaneDetail.vue";
 
+import StarshipsPaneDetail from "@/components/details/info-pane/StarshipsPaneDetail";
+
 export default {
   components: {
     ImgDetail,
@@ -79,6 +84,7 @@ export default {
     FilmsPaneDetail,
     SpeciesPaneDetail,
     VehiclesPaneDetail,
+    StarshipsPaneDetail,
   },
   name: "DetailsView",
   inject: ["GStore"],
