@@ -51,9 +51,6 @@ export default {
       terrain: this.GStore.details.terrain,
       surfaceWater: this.GStore.details.surface_water,
       population: this.GStore.details.population,
-
-      residents: this.GStore.details.residents,
-      films: this.GStore.details.films,
     };
   },
 };

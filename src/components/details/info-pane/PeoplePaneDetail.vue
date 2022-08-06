@@ -46,8 +46,6 @@ export default {
       birthYear: this.GStore.details.birth_year,
       gender: this.GStore.details.gender,
       homeworld: this.GStore.details.homeworld,
-      // homeworld: this.GStore.details.homeworldObj.name,
-      // name: this.GStore.details.name,
     };
   },
 

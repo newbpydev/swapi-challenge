@@ -4,6 +4,7 @@
       <img-detail></img-detail>
       <people-pane-detail v-if="routeType === 'people'"></people-pane-detail>
       <planets-pane-detail v-if="routeType === 'planets'"></planets-pane-detail>
+      <films-pane-detail v-if="routeType === 'films'"></films-pane-detail>
 
       <related-details
         v-if="relatedLists.films"
@@ -34,6 +35,12 @@
         title="residents"
         :list="relatedLists.residents"
       ></related-details>
+
+      <related-details
+        v-if="relatedLists.characters"
+        title="characters"
+        :list="relatedLists.characters"
+      ></related-details>
     </div>
   </section>
 </template>
@@ -43,6 +50,7 @@ import ImgDetail from "@/components/details/ImgDetail.vue";
 import PeoplePaneDetail from "@/components/details/info-pane/PeoplePaneDetail";
 import RelatedDetails from "@/components/details/RelatedDetails.vue";
 import PlanetsPaneDetail from "@/components/details/info-pane/PlanetsPaneDetail.vue";
+import FilmsPaneDetail from "@/components/details/info-pane/FilmsPaneDetail.vue";
 
 export default {
   components: {
@@ -50,6 +58,7 @@ export default {
     PeoplePaneDetail,
     RelatedDetails,
     PlanetsPaneDetail,
+    FilmsPaneDetail,
   },
   name: "DetailsView",
   inject: ["GStore"],
@@ -63,6 +72,7 @@ export default {
         vehicles: this.GStore.details.vehicles,
         starships: this.GStore.details.starships,
         residents: this.GStore.details.residents,
+        characters: this.GStore.details.characters,
       },
     };
   },

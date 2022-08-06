@@ -1,29 +1,27 @@
 <template>
   <div class="info-pane">
-    <base-text-title :title="name"></base-text-title>
+    <base-text-title :title="title"></base-text-title>
 
     <base-text-output
-      label="Rotation Period"
-      :description="rotationPeriod"
+      label="Episode ID"
+      :description="`${episodeId}`"
+    ></base-text-output>
+
+    <base-text-output
+      label="Director"
+      :description="director"
     ></base-text-output>
     <base-text-output
-      label="Orbital Period"
-      :description="orbitalPeriod"
+      label="Producer"
+      :description="producer"
     ></base-text-output>
     <base-text-output
-      label="Diameter"
-      :description="diameter"
-    ></base-text-output>
-    <base-text-output label="Climate" :description="climate"></base-text-output>
-    <base-text-output label="Gravity" :description="gravity"></base-text-output>
-    <base-text-output label="Terrain" :description="terrain"></base-text-output>
-    <base-text-output
-      label="Surface Water"
-      :description="surfaceWater"
-    ></base-text-output>
-    <base-text-output
-      label="Population"
-      :description="population"
+      label="Release Date"
+      :description="releaseDate"
+    ></base-text-output
+    ><base-text-output
+      label="Opening Crawl"
+      :description="openingCrawl"
     ></base-text-output>
   </div>
 </template>
@@ -31,8 +29,6 @@
 <script>
 import BaseTextOutput from "./BaseTextOutput.vue";
 import BaseTextTitle from "./BaseTextTitle.vue";
-// import StarWarsService from "@/services/StarWarsService";
-// import extraction from "@/utils/extraction";
 
 export default {
   components: { BaseTextOutput, BaseTextTitle },
@@ -42,26 +38,15 @@ export default {
 
   data() {
     return {
-      name: this.GStore.details.name,
-      rotationPeriod: this.GStore.details.rotation_period,
-      orbitalPeriod: this.GStore.details.orbital_period,
-      diameter: this.GStore.details.diameter,
-      climate: this.GStore.details.climate,
-      gravity: this.GStore.details.gravity,
-      terrain: this.GStore.details.terrain,
-      surfaceWater: this.GStore.details.surface_water,
-      population: this.GStore.details.population,
-
-      residents: this.GStore.details.residents,
-      films: this.GStore.details.films,
+      title: this.GStore.details.title,
+      episodeId: this.GStore.details.episode_id,
+      openingCrawl: this.GStore.details.opening_crawl,
+      director: this.GStore.details.director,
+      producer: this.GStore.details.producer,
+      releaseDate: this.GStore.details.release_date,
     };
   },
 };
 </script>
 
-<style scoped>
-/* .pane {
-  text-align: left;
-  grid-column: span 2;
-} */
-</style>
+<style scoped></style>
