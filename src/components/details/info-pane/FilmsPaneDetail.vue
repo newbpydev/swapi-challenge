@@ -36,7 +36,7 @@ import BaseTextTitle from "./BaseTextTitle.vue";
 
 export default {
   components: { BaseTextOutput, BaseTextTitle },
-  name: "PlanetsPaneDetail",
+  name: "FilmsPaneDetail",
 
   inject: ["GStore"],
 

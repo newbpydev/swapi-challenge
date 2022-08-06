@@ -59,7 +59,8 @@ export default {
       - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
       - Weights: 400, 700
 */
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700;900&display=swap");
 
 /*! Variables  */
 :root {
@@ -140,5 +141,13 @@ main {
 }
 a {
   text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.info-pane {
+  text-align: left;
+  grid-column: span 2;
 }
 </style>

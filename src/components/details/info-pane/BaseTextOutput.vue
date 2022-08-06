@@ -21,4 +21,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+div {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+</style>

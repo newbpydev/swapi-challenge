@@ -1,6 +1,7 @@
 <template>
-  <div class="people-pane">
-    <base-text-output label="Name" :description="name"></base-text-output>
+  <div class="info-pane">
+    <base-text-title :title="name"></base-text-title>
+
     <base-text-output label="Height" :description="height"></base-text-output>
     <base-text-output label="Mass" :description="mass"></base-text-output>
     <base-text-output
@@ -25,11 +26,12 @@
 
 <script>
 import BaseTextOutput from "./BaseTextOutput.vue";
+import BaseTextTitle from "./BaseTextTitle.vue";
 // import StarWarsService from "@/services/StarWarsService";
 // import extraction from "@/utils/extraction";
 
 export default {
-  components: { BaseTextOutput },
+  components: { BaseTextOutput, BaseTextTitle },
   name: "PeoplePaneDetail",
 
   inject: ["GStore"],
@@ -64,8 +66,8 @@ export default {
 </script>
 
 <style scoped>
-.people-pane {
+/* .pane {
   text-align: left;
   grid-column: span 2;
-}
+} */
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>{{ listItem }}</div>
+  <li>{{ listItem }}</li>
 </template>
 
 <script>
@@ -13,4 +13,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+li {
+  /* list-style: none; */
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+</style>

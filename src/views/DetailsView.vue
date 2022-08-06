@@ -3,11 +3,37 @@
     <div class="details-card">
       <img-detail></img-detail>
       <people-pane-detail v-if="routeType === 'people'"></people-pane-detail>
+      <planets-pane-detail v-if="routeType === 'planets'"></planets-pane-detail>
 
-      <related-details title="films" :list="films"></related-details>
-      <related-details title="species" :list="species"></related-details>
-      <related-details title="vehicles" :list="vehicles"></related-details>
-      <related-details title="starships" :list="starships"></related-details>
+      <related-details
+        v-if="relatedLists.films"
+        title="films"
+        :list="relatedLists.films"
+      ></related-details>
+
+      <related-details
+        v-if="relatedLists.species"
+        title="species"
+        :list="relatedLists.species"
+      ></related-details>
+
+      <related-details
+        v-if="relatedLists.vehicles"
+        title="vehicles"
+        :list="relatedLists.vehicles"
+      ></related-details>
+
+      <related-details
+        v-if="relatedLists.starships"
+        title="starships"
+        :list="relatedLists.starships"
+      ></related-details>
+
+      <related-details
+        v-if="relatedLists.residents"
+        title="residents"
+        :list="relatedLists.residents"
+      ></related-details>
     </div>
   </section>
 </template>
@@ -16,18 +42,28 @@
 import ImgDetail from "@/components/details/ImgDetail.vue";
 import PeoplePaneDetail from "@/components/details/info-pane/PeoplePaneDetail";
 import RelatedDetails from "@/components/details/RelatedDetails.vue";
+import PlanetsPaneDetail from "@/components/details/info-pane/PlanetsPaneDetail.vue";
 
 export default {
-  components: { ImgDetail, PeoplePaneDetail, RelatedDetails },
+  components: {
+    ImgDetail,
+    PeoplePaneDetail,
+    RelatedDetails,
+    PlanetsPaneDetail,
+  },
   name: "DetailsView",
   inject: ["GStore"],
   data() {
     return {
       routeType: this.$route.params.type,
-      films: this.GStore.details.films,
-      species: this.GStore.details.species,
-      vehicles: this.GStore.details.vehicles,
-      starships: this.GStore.details.starships,
+
+      relatedLists: {
+        films: this.GStore.details.films,
+        species: this.GStore.details.species,
+        vehicles: this.GStore.details.vehicles,
+        starships: this.GStore.details.starships,
+        residents: this.GStore.details.residents,
+      },
     };
   },
 };
