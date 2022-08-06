@@ -7,7 +7,7 @@
 
 <script>
 import LogoComponent from "@/components/LogoComponent";
-import NavigationComponent from "@/components/NavigationComponent";
+import NavigationComponent from "@/components/navigation/NavigationComponent";
 
 export default {
   components: {
@@ -21,6 +21,6 @@ export default {
 
 <style lang="css" scoped>
 header {
-  margin-bottom: 10rem;
+  margin-bottom: 3.2rem;
 }
 </style>

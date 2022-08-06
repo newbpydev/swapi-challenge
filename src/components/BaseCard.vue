@@ -58,18 +58,18 @@ export default {
   beforeMount() {
     // console.log(this.cardObj);
     try {
-      console.log(this.cardObj);
-      console.log(!!this.cardObj.url);
+      // console.log(this.cardObj);
+      // console.log(!!this.cardObj.url);
       if (this.cardObj.url) {
         this.urlSplit = this.cardObj.url.split("/");
         this.id = this.urlSplit[this.urlSplit.length - 2];
         this.category = this.urlSplit[this.urlSplit.length - 3];
         this.title = this.cardObj.name ? this.cardObj.name : this.cardObj.title;
-        console.log(this.id, this.category);
+        // console.log(this.id, this.category);
       } else {
         this.category = this.url;
         this.title = this.url;
-        console.log(this.category);
+        // console.log(this.category);
       }
     } catch (error) {
       console.log({ error });

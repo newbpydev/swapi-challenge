@@ -18,6 +18,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 4.8rem;
 }
 h1,
 h2 {
@@ -28,12 +29,12 @@ h2 {
 }
 
 h1 {
-  font-size: 5.2rem;
+  font-size: 9.6rem;
   border-bottom: 0.2rem solid var(--prim-color-yellow);
   width: fit-content;
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 4.8rem;
 }
 </style>

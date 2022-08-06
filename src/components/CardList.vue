@@ -29,9 +29,9 @@ export default {
 
   watch: {
     menuItems(val) {
-      console.log(val);
+      // console.log(val);
       this.items = Object.keys(val);
-      console.log(this.items);
+      // console.log(this.items);
     },
   },
 };

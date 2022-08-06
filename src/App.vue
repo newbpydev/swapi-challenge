@@ -90,8 +90,8 @@ body {
 }
 
 main {
-  max-width: 1440px;
-  margin: 0 auto;
+  /* max-width: 1440px;
+  margin: 0 auto; */
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,9 +102,17 @@ main {
   font-family: DeathStar;
   src: url(./assets/fonts/DeathStar-VmWB.ttf);
 }
+@font-face {
+  font-family: Aurek;
+  src: url(./assets/fonts/Aurek-Besh.ttf);
+}
+@font-face {
+  font-family: Mandalor;
+  src: url(./assets/fonts/mandalor.ttf);
+}
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -115,6 +123,8 @@ main {
   gap: 1rem;
   color: #2c3e50;
   margin-top: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 a {
   text-decoration: none;

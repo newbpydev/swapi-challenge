@@ -16,6 +16,12 @@ const routes = [
     path: "/",
     name: "HomeView",
     component: HomeView,
+    beforeEnter: (to) => {
+      console.log(to);
+      return StarWarsService.getRoot().then((res) => {
+        GStore.menu = Object.keys(res.data);
+      });
+    },
   },
   {
     //* ResultsView
