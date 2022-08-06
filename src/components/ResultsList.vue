@@ -22,24 +22,12 @@ export default {
 
   props: ["results"],
 
-  data() {
-    return {
-      items: null,
-      // results: this.GStore.results.results,
-    };
-  },
-
-  // watch: {
-  //   results(val) {
-  //     console.log(val);
-  //     this.items = val;
-  //     console.log(this.items[0].name);
-  //     // this.items = Object.keys(val);
-  //     // console.log(this.items);
-  //   },
+  // data() {
+  //   return {
+  //     items: null,
+  //   };
   // },
 };
-// BaseCard;
 </script>
 
 <style lang="css" scoped>

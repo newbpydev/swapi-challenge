@@ -49,13 +49,17 @@ const routes = [
     path: "/:type/:id",
     name: "DetailsView",
     component: DetailsView,
-    beforeEnter: (to) => {
-      return StarWarsService.getOne(to.params.type, to.params.id).then(
-        (res) => {
-          GStore.details = res.data;
-          console.log(res.data);
-        }
-      );
+    beforeEnter: async (to) => {
+      const res = await StarWarsService.getOne(to.params.type, to.params.id);
+      GStore.details = res.data;
+
+      // const homeworldObj = StarWarsService.getName(GStore.details.homeworld);
+      // console.log(homeworldObj, GStore.details.homeworld);
+
+      // GStore.details = { ...GStore.details, homeworldObj };
+      // // const hwRes = await StarWarsService.
+
+      console.log("⭐⭐ from route details view", GStore.details);
     },
   },
 ];

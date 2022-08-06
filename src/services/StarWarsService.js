@@ -27,7 +27,4 @@ export default {
   getOne(category, id) {
     return apiClient.get(`/${category}/${id}`);
   },
-  // getTest() {
-  //   return apiTest.get();
-  // },
 };
