@@ -5,6 +5,7 @@
       <people-pane-detail v-if="routeType === 'people'"></people-pane-detail>
       <planets-pane-detail v-if="routeType === 'planets'"></planets-pane-detail>
       <films-pane-detail v-if="routeType === 'films'"></films-pane-detail>
+      <species-pane-detail v-if="routeType === 'species'"></species-pane-detail>
 
       <related-details
         v-if="relatedLists.films"
@@ -41,6 +42,18 @@
         title="characters"
         :list="relatedLists.characters"
       ></related-details>
+
+      <related-details
+        v-if="relatedLists.people"
+        title="people"
+        :list="relatedLists.people"
+      ></related-details>
+
+      <related-details
+        v-if="relatedLists.pilots"
+        title="pilots"
+        :list="relatedLists.pilots"
+      ></related-details>
     </div>
   </section>
 </template>
@@ -51,6 +64,7 @@ import PeoplePaneDetail from "@/components/details/info-pane/PeoplePaneDetail";
 import RelatedDetails from "@/components/details/RelatedDetails.vue";
 import PlanetsPaneDetail from "@/components/details/info-pane/PlanetsPaneDetail.vue";
 import FilmsPaneDetail from "@/components/details/info-pane/FilmsPaneDetail.vue";
+import SpeciesPaneDetail from "@/components/details/info-pane/SpeciesPaneDetail.vue";
 
 export default {
   components: {
@@ -59,6 +73,7 @@ export default {
     RelatedDetails,
     PlanetsPaneDetail,
     FilmsPaneDetail,
+    SpeciesPaneDetail,
   },
   name: "DetailsView",
   inject: ["GStore"],
@@ -73,6 +88,8 @@ export default {
         starships: this.GStore.details.starships,
         residents: this.GStore.details.residents,
         characters: this.GStore.details.characters,
+        people: this.GStore.details.people,
+        pilots: this.GStore.details.pilots,
       },
     };
   },
