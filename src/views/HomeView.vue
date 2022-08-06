@@ -1,12 +1,12 @@
 <template>
   <!-- <header-component></header-component> -->
-  <card-list :menuItems="menuItems"></card-list>
+  <card-list :menuItems="GStore.menu"></card-list>
 </template>
 
 <script>
 // import HeaderComponent from "@/components/HeaderComponent";
 import CardList from "@/components/CardList.vue";
-import StarWarsService from "@/services/StarWarsService";
+// import StarWarsService from "@/services/StarWarsService";
 
 export default {
   name: "HomeView",
@@ -15,19 +15,25 @@ export default {
     CardList,
   },
 
-  data() {
-    return {
-      menuItems: null,
-    };
+  inject: ["GStore"],
+
+  mounted() {
+    console.log(this.GStore.menu);
   },
 
-  beforeRouteEnter(routeTo, routeFrom, next) {
-    StarWarsService.getRoot().then((response) => {
-      next((component) => {
-        component.menuItems = response.data;
-      });
-    });
-  },
+  // data() {
+  //   return {
+  //     menuItems: null,
+  //   };
+  // },
+
+  // beforeRouteEnter(routeTo, routeFrom, next) {
+  //   StarWarsService.getRoot().then((response) => {
+  //     next((component) => {
+  //       component.menuItems = response.data;
+  //     });
+  //   });
+  // },
 };
 </script>
 

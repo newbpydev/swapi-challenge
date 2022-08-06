@@ -10,6 +10,8 @@
 <script>
 import BackgroundEffect from "@/components/BackgroundEffect";
 import HeaderComponent from "@/components/HeaderComponent";
+import StarWarsService from "./services/StarWarsService";
+import GStore from "@/store";
 
 export default {
   name: "App",
@@ -17,6 +19,16 @@ export default {
   components: {
     BackgroundEffect,
     HeaderComponent,
+  },
+
+  beforeCreate() {
+    return StarWarsService.getRoot()
+      .then((response) => {
+        GStore.menu = Object.keys(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>

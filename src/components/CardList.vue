@@ -1,7 +1,7 @@
 <template>
   <div class="card-list--grid">
     <base-card
-      v-for="item in items"
+      v-for="item in menuItems"
       :key="item"
       :url="item"
       :cardObj="menuItems"
@@ -27,13 +27,13 @@ export default {
     };
   },
 
-  watch: {
-    menuItems(val) {
-      // console.log(val);
-      this.items = Object.keys(val);
-      // console.log(this.items);
-    },
-  },
+  // watch: {
+  //   menuItems(val) {
+  //     // console.log(val);
+  //     this.items = Object.keys(val);
+  //     // console.log(this.items);
+  //   },
+  // },
 };
 // BaseCard;
 </script>

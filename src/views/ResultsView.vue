@@ -2,13 +2,13 @@
   <!-- <header-component></header-component> -->
 
   <!-- <results-list :resultItems="GStore.results"></results-list> -->
-  <results-list></results-list>
+  <results-list :results="GStore.results.results"></results-list>
 </template>
 
 <script>
 // import HeaderComponent from "@/components/HeaderComponent";
 import ResultsList from "@/components/ResultsList.vue";
-// import StarWarsService from "@/services/StarWarsService";
+import StarWarsService from "@/services/StarWarsService";
 
 export default {
   name: "ResultsView",
@@ -17,6 +17,8 @@ export default {
     ResultsList,
   },
 
+  inject: ["GStore"],
+
   data() {
     return {
       results: null,
@@ -24,31 +26,16 @@ export default {
     };
   },
 
-  // inject: ["GStore"],
-
-  watch: {
-    // results() {
-    //   this.type = this.$route.params.type;
-    //   console.log("💥💥💥💥", this.type);
-    // },
-    // console.log(this.$route.params.category);
+  beforeRouteUpdate(to) {
+    return StarWarsService.getAll(to.params.type)
+      .then((response) => {
+        this.GStore.results = response.data;
+        console.log(this.GStore);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
-
-  computed: {
-    // category() {
-    //   return this.$route.params.type;
-    // },
-  },
-
-  // beforeRouteEnter(routeTo, routeFrom, next) {
-  //   StarWarsService.getAll(type).then((response) => {
-  //     // console.log(response.data.results);
-  //     // console.log(routeTo, routeFrom);
-  //     next((component) => {
-  //       component.results = response.data.results;
-  //     });
-  //   });
-  // },
 };
 </script>
 

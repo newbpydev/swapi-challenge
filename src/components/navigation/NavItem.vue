@@ -1,6 +1,11 @@
 <template>
-  <router-link :to="{ name: 'HomeView' }">
-    <li :class="{ active: navTitle === $route.params.type }">{{ navTitle }}</li>
+  <router-link :to="{ name: 'ResultsView', params: { type: navTitle } }">
+    <li
+      :disabled="navTitle === $route.params.type"
+      :class="{ active: navTitle === $route.params.type }"
+    >
+      {{ navTitle }}
+    </li>
   </router-link>
 </template>
 
@@ -15,12 +20,9 @@ export default {
 .active {
   /* color: blue; */
   position: relative;
-  cursor: default;
+  /* cursor: default; */
   color: black;
   -webkit-text-stroke: 0.1rem var(--prim-color-yellow);
-}
-.active::before {
-  content: "";
 }
 
 a {

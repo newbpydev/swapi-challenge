@@ -16,20 +16,21 @@ const routes = [
     path: "/",
     name: "HomeView",
     component: HomeView,
-    beforeEnter: (to) => {
-      console.log(to);
-      return StarWarsService.getRoot().then((res) => {
-        GStore.menu = Object.keys(res.data);
-      });
-    },
+    // beforeEnter: async (to) => {
+    //   console.log(to);
+    //   const res = await StarWarsService.getRoot();
+    //   GStore.menu = Object.keys(res.data);
+    // },
   },
   {
     //* ResultsView
     path: "/:type",
     name: "ResultsView",
     component: ResultsView,
+
     // props: true,
     beforeEnter: (to) => {
+      console.log("💥💥 /type beforeEnter");
       return StarWarsService.getAll(to.params.type)
         .then((response) => {
           GStore.results = response.data;
@@ -38,6 +39,9 @@ const routes = [
         .catch((error) => {
           console.log(error);
         });
+    },
+    beforeUpdate() {
+      console.log("⭐⭐ /type beforeUpdate");
     },
   },
   {

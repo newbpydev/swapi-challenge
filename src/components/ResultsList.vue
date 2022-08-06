@@ -20,12 +20,12 @@ export default {
     BaseCard,
   },
 
-  inject: ["GStore"],
+  props: ["results"],
 
   data() {
     return {
       items: null,
-      results: this.GStore.results.results,
+      // results: this.GStore.results.results,
     };
   },
 
