@@ -24,14 +24,10 @@ const routes = [
     name: "ResultsView",
     component: ResultsView,
     props: (route) => ({ page: parseInt(route.query.page) || 1 }),
-    beforeEnter: (to, from) => {
-      console.log("💥💥 /type beforeEnter");
-      console.log({ to, from });
+    beforeEnter: (to) => {
       return StarWarsService.getAll(to.params.type, to.query.page || 1)
         .then((response) => {
           GStore.results = response.data;
-
-          console.log(GStore, response.data);
         })
         .catch((error) => {
           console.log(error);
@@ -46,10 +42,6 @@ const routes = [
     beforeEnter: async (to) => {
       const res = await StarWarsService.getOne(to.params.type, to.params.id);
       GStore.details = res.data;
-
-      // // const hwRes = await StarWarsService.
-
-      console.log("⭐⭐ from route details view", GStore.details);
     },
   },
 ];
@@ -68,7 +60,6 @@ router.beforeEach(() => {
 });
 
 router.afterEach(() => {
-  //these hooks do not get a next function and cannot affect the navigation
   NProgress.done();
 });
 

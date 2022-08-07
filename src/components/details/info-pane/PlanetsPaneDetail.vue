@@ -31,8 +31,6 @@
 <script>
 import BaseTextOutput from "./BaseTextOutput.vue";
 import BaseTextTitle from "./BaseTextTitle.vue";
-// import StarWarsService from "@/services/StarWarsService";
-// import extraction from "@/utils/extraction";
 
 export default {
   components: { BaseTextOutput, BaseTextTitle },

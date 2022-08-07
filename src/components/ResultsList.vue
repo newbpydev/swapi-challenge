@@ -21,12 +21,6 @@ export default {
   },
 
   props: ["results"],
-
-  // data() {
-  //   return {
-  //     items: null,
-  //   };
-  // },
 };
 </script>
 

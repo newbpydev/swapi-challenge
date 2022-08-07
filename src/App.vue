@@ -34,31 +34,6 @@ export default {
 </script>
 
 <style>
-/*! Style Notes  */ /*
-- FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-- SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-# Star Wars Style Guide
-  ## Layout
-    The designs were created to the following widths:
-    - Mobile: 375px
-    - Desktop: 1440px
-  ## Colors
-    ### Primary
-      Dark cyan: hsl(185, 75%, 39%)
-      Very dark desaturated blue: hsl(229, 23%, 23%)
-      Dark grayish blue: hsl(227, 10%, 46%)
-    ### Neutral
-      Dark gray: hsl(0, 0%, 59%)
-  ## Typography
-    ### Body Copy
-      - Font size (name and stats): 18px
-    ### Font
-      - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
-      - Weights: 400, 700
-*/
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700;900&display=swap");
 

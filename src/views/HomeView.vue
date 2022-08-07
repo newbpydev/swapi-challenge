@@ -12,10 +12,6 @@ export default {
   },
 
   inject: ["GStore"],
-
-  mounted() {
-    console.log(this.GStore.menu);
-  },
 };
 </script>
 

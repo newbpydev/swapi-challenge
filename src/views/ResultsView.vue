@@ -53,18 +53,14 @@ export default {
 
   computed: {
     hasNextPage() {
-      console.log(this.page);
-      console.log(this.page < this.totalPages);
       return this.page < this.totalPages;
     },
     totalPages() {
-      console.log(Math.ceil(this.GStore.results.count / 10));
       return Math.ceil(this.GStore.results.count / 10);
     },
   },
 
   beforeRouteUpdate(to) {
-    // console.log("⭐⭐ beforeRouteUpdate()");
     return StarWarsService.getAll(to.params.type, parseInt(to.query.page) || 1)
       .then((response) => {
         this.GStore.results = response.data;

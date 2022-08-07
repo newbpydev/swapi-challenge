@@ -48,23 +48,6 @@ export default {
       homeworld: this.GStore.details.homeworld,
     };
   },
-
-  computed: {
-    // homeworldName() {
-    //   const category = extraction.getCategory(this.homeworld);
-    //   console.log(category);
-    //   return category;
-    // },
-  },
-
-  mounted() {
-    // console.log(extraction.getCategory(this.homeworld));
-  },
-
-  beforeRouteEnter: (to, from, next) => {
-    console.log("💥💥from people before route enter");
-    console.log({ to, from, next });
-  },
 };
 </script>
 

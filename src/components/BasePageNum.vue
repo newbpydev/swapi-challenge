@@ -2,7 +2,6 @@
   <div>
     <router-link :to="{ name: 'ResultsView', query: { page: pageNum } }">
       <span :class="{ active: parseInt($route.query.page) === pageNum }">
-        <!-- <router-link :to="`/${$route.params.type}/?page=${pageNum}`">{{ -->
         {{ pageNum }}
       </span>
     </router-link>

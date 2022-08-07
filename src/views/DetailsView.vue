@@ -109,23 +109,13 @@ export default {
   },
 
   beforeRouteUpdate: (to) => {
-    console.log("✨✨✨✨✨✨✨✨✨✨✨✨");
-    // console.log(this.GStore);
-    console.log(to);
-    console.log(to.params.type, to.params.id);
     return StarWarsService.getOne(to.params.type, to.params.id)
       .then((response) => {
-        console.log("❌❌❌", response.data);
-        console.log("❌❌❌", this.GStore);
         this.GStore.details = response.data;
       })
       .catch((error) => {
         console.log(error);
       });
-  },
-  beforeRouteLeave: (to, from) => {
-    console.log("💚💚💚");
-    console.log(to, from);
   },
 };
 </script>
@@ -135,15 +125,6 @@ export default {
   display: flex;
   justify-content: center;
 }
-/* .details-card {
-  
-  background: white;
-  border-radius: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 2rem;
-} */
 
 /* ! MEDIA: 1350px */
 @media (max-width: 84.375em) {

@@ -27,15 +27,8 @@ export default {
     };
   },
 
-  // watch: {
-  //   menuItems(val) {
-  //     // console.log(val);
-  //     this.items = Object.keys(val);
-  //     // console.log(this.items);
-  //   },
-  // },
 };
-// BaseCard;
+
 </script>
 
 <style lang="css" scoped>
