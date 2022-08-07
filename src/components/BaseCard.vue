@@ -1,9 +1,6 @@
 <template>
   <router-link :to="id ? `${category}/${id}` : category">
     <div class="card" :style="{ 'background-image': 'url(' + imgUrl + ')' }">
-      <!-- <img :src="imgUrl" alt="" /> -->
-
-      <!-- <h3>{{ title.toUpperCase() }}</h3> -->
       <h3>{{ title }}</h3>
     </div>
   </router-link>
@@ -14,15 +11,6 @@ export default {
   name: "BaseCard",
 
   props: {
-    // title: {
-    //   type: String,
-    //   default: "Title goes here",
-    // },
-    // imgUrl: {
-    //   type: String,
-    //   default:
-    //     "https://vignette.wikia.nocookie.net/fr.starwars/images/3/32/Dark_Vador.jpg",
-    // },
     url: {
       type: String,
       default: "#",
@@ -43,33 +31,16 @@ export default {
     };
   },
 
-  // watch: {
-  //   cardObj(val) {
-  //     console.log(val);
-  //   },
-  // },
-
-  computed: {
-    // category() {
-    //   return this.data;
-    // },
-  },
-
   beforeMount() {
-    // console.log(this.cardObj);
     try {
-      // console.log(this.cardObj);
-      // console.log(!!this.cardObj.url);
       if (this.cardObj.url) {
         this.urlSplit = this.cardObj.url.split("/");
         this.id = this.urlSplit[this.urlSplit.length - 2];
         this.category = this.urlSplit[this.urlSplit.length - 3];
         this.title = this.cardObj.name ? this.cardObj.name : this.cardObj.title;
-        // console.log(this.id, this.category);
       } else {
         this.category = this.url;
         this.title = this.url;
-        // console.log(this.category);
       }
     } catch (error) {
       console.log({ error });
