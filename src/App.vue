@@ -165,13 +165,13 @@ li {
 
 /* ! MEDIA: 890px */
 @media (max-width: 55.625em) {
+  .details-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 /* ! MEDIA: 650px */
 @media (max-width: 40.625em) {
-  .details-card {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 /* ! MEDIA: 460px */

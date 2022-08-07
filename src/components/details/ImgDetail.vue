@@ -20,13 +20,15 @@ export default {
 
 <style scoped>
 .image-card {
-  width: 35rem;
+  width: 39rem;
+  height: auto;
   border: 1rem solid gray;
   padding: 1rem;
   display: flex;
 }
 img {
   width: 100%;
+  min-width: 35rem;
   height: auto;
   background-size: cover;
 }
@@ -44,6 +46,11 @@ img {
 
 /* ! MEDIA: 890px */
 @media (max-width: 55.625em) {
+  /* img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+} */
 }
 
 /* ! MEDIA: 650px */
