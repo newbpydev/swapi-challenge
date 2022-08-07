@@ -35,7 +35,7 @@ functions to update the global storage while going from one route to the other.
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/newbpydev/05-3-column-preview-card-component-main)
+- Solution URL: [GitHub](https://github.com/newbpydev/swapi-challenge)
 - Live Site URL: [Live Site](https://cocky-poitras-2c8a95.netlify.app/)
 
 ## My process
