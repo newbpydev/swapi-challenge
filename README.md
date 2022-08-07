@@ -1,8 +1,8 @@
-# swapi-challenge
+# SWAPI Challenge
 
 ![Design preview for the swapi coding challenge](./images/screenshot-desktop.png)
 
-This is a solution to the [SWAPI challenge on INFLOR](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-).
+This is a solution to the [SWAPI challenge for INFLOR](https://github.com/newbpydev/swapi-challenge).
 
 ## Table of contents
 

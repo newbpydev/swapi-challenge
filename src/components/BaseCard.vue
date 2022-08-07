@@ -1,6 +1,11 @@
 <template>
   <router-link :to="id ? `${category}/${id}` : category">
-    <div class="card" :style="{ 'background-image': 'url(' + imgUrl + ')' }">
+    <div
+      class="card"
+      :style="{
+        'background-image': 'url(' + newImgUrl + ')',
+      }"
+    >
       <h3>{{ title }}</h3>
     </div>
   </router-link>
@@ -29,6 +34,45 @@ export default {
         "https://vignette.wikia.nocookie.net/fr.starwars/images/3/32/Dark_Vador.jpg",
       title: "",
     };
+  },
+
+  computed: {
+    newImgUrl() {
+      let url = "";
+      switch (this.category) {
+        case "people":
+          url =
+            "https://vignette.wikia.nocookie.net/fr.starwars/images/3/32/Dark_Vador.jpg";
+          break;
+        case "planets":
+          url =
+            "https://static.wikia.nocookie.net/starwars/images/4/4d/Eaw_Kuat.jpg";
+          break;
+        case "films":
+          url =
+            "https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg";
+          break;
+        case "species":
+          url =
+            "https://www.denofgeek.com/wp-content/uploads/2019/12/star-wars-alien-races.jpg?fit=1200%2C675";
+          break;
+        case "vehicles":
+          url =
+            "https://qph.cf2.quoracdn.net/main-qimg-e75a53262064ef86600891f5c3a2d9c7.webp";
+          break;
+        case "starships":
+          url =
+            "https://i.pinimg.com/originals/a2/2c/c4/a22cc4c5248145bd7d43b77b09bcec44.jpg";
+          break;
+
+        default:
+          url =
+            "https://vignette.wikia.nocookie.net/fr.starwars/images/3/32/Dark_Vador.jpg";
+          break;
+      }
+
+      return url;
+    },
   },
 
   beforeMount() {

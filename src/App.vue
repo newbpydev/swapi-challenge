@@ -130,6 +130,10 @@ li {
   list-style: none;
 }
 
+main {
+  margin-bottom: 10rem;
+}
+
 .info-pane {
   text-align: left;
   grid-column: span 2;
