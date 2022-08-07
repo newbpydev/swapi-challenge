@@ -79,11 +79,15 @@ li {
   list-style: none;
 }
 
-/* ! MEDIA: 1200px */
-@media (max-width: 78em) {
+/* ! MEDIA: 1350px */
+@media (max-width: 84.375em) {
   li {
     font-size: 2.4rem;
   }
+}
+
+/* ! MEDIA: 1200px */
+@media (max-width: 78em) {
 }
 
 /* ! MEDIA: 1100px */

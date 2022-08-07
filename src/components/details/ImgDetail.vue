@@ -19,6 +19,18 @@ export default {
 </script>
 
 <style scoped>
+.image-card {
+  width: 35rem;
+  border: 1rem solid gray;
+  padding: 1rem;
+  display: flex;
+}
+img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
 /* ! MEDIA: 1350px */
 @media (max-width: 84.375em) {
 }
