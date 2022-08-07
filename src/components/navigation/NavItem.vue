@@ -33,7 +33,6 @@ export default {
 
 a {
   padding: 1rem 1rem;
-  /* background: var(--prim-color-yellow); */
   position: relative;
 }
 
@@ -78,5 +77,35 @@ li {
   letter-spacing: 0.4rem;
   color: var(--prim-color-yellow);
   list-style: none;
+}
+
+/* ! MEDIA: 1200px */
+@media (max-width: 78em) {
+  li {
+    font-size: 2.4rem;
+  }
+}
+
+/* ! MEDIA: 1100px */
+@media (max-width: 68.75em) {
+  li {
+    font-size: 2rem;
+  }
+}
+
+/* ! MEDIA: 1100px */
+@media (max-width: 68.75em) {
+}
+
+/* ! MEDIA: 890px */
+@media (max-width: 55.625em) {
+}
+
+/* ! MEDIA: 650px */
+@media (max-width: 40.625em) {
+}
+
+/* ! MEDIA: 460px */
+@media (max-width: 28.75em) {
 }
 </style>

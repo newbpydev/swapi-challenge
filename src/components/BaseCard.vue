@@ -101,7 +101,7 @@ export default {
 
 h3 {
   background: var(--prim-color-yellow);
-  font-family: DeathStar;
+  font-family: Galaxy;
   letter-spacing: 0.6rem;
   width: 100%;
   padding: 1rem 0;

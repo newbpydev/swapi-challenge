@@ -23,13 +23,43 @@ export default {
 
 <style scoped>
 nav {
-  font-family: DeathStar;
+  font-family: Galaxy;
   margin-top: 2.4rem;
 }
 ul {
-  display: flex;
-  /* flex-direction: row; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   justify-content: center;
   gap: 3rem;
+}
+
+/* ! MEDIA: 1350px */
+@media (max-width: 84.375em) {
+}
+/* ! MEDIA: 1200px */
+@media (max-width: 78em) {
+}
+
+/* ! MEDIA: 1100px */
+@media (max-width: 68.75em) {
+  ul {
+    gap: 1rem;
+  }
+}
+
+/* ! MEDIA: 890px */
+@media (max-width: 55.625em) {
+  ul {
+    /* justify-content: center; */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ! MEDIA: 650px */
+@media (max-width: 40.625em) {
+}
+
+/* ! MEDIA: 460px */
+@media (max-width: 28.75em) {
 }
 </style>

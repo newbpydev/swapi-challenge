@@ -24,8 +24,10 @@ h1,
 h2 {
   margin-top: 0.8rem;
   font-family: DeathStar;
-  color: black;
-  -webkit-text-stroke: 0.01rem var(--prim-color-yellow);
+  /* color: black; */
+  color: var(--prim-color-yellow);
+  /* -webkit-text-stroke: 0.01rem var(--prim-color-yellow); */
+  /* -webkit-text-stroke: 0.2rem var(--prim-color-yellow); */
 }
 
 h1 {

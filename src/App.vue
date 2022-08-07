@@ -62,6 +62,23 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700;900&display=swap");
 
+@font-face {
+  font-family: DeathStar;
+  src: url(./assets/fonts/SfDistantGalaxyOutline-xoeO.ttf);
+}
+@font-face {
+  font-family: Galaxy;
+  src: url(./assets/fonts/SfDistantGalaxy-0l3d.ttf);
+}
+@font-face {
+  font-family: Aurek;
+  src: url(./assets/fonts/Aurek-Besh.ttf);
+}
+@font-face {
+  font-family: Mandalor;
+  src: url(./assets/fonts/mandalor.ttf);
+}
+
 /*! Variables  */
 :root {
   --prim-color-v-dark-gray: rgb(6, 6, 6);
@@ -90,48 +107,12 @@ body {
   font-size: var(--font-size-name-stats);
   text-align: center;
   color: var(--prim-color-v-dark-desa-blue);
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* min-height: 100vh;
-  min-width: 100vw;
-  position: relative; */
-
-  /* overflow: hidden; */
-  background-color: var(--prim-color-v-dark-gray);
-}
-
-main {
-  /* max-width: 1440px;
-  margin: 0 auto; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-}
-
-@font-face {
-  font-family: DeathStar;
-  src: url(./assets/fonts/DeathStar-VmWB.ttf);
-}
-@font-face {
-  font-family: Aurek;
-  src: url(./assets/fonts/Aurek-Besh.ttf);
-}
-@font-face {
-  font-family: Mandalor;
-  src: url(./assets/fonts/mandalor.ttf);
 }
 
 #app {
-  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  /* display: flex;
-  justify-content: center; */
-  /* align-items: center; */
 
   gap: 1rem;
   color: #2c3e50;
@@ -149,5 +130,9 @@ li {
 .info-pane {
   text-align: left;
   grid-column: span 2;
+}
+
+/* ! MEDIA: 1200px */
+@media (max-width: 78em) {
 }
 </style>
