@@ -33,7 +33,7 @@ export default {
 <style lang="css" scoped>
 .card-list--grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-content: center;
   justify-items: center;
   gap: 3rem;

@@ -1,7 +1,7 @@
 <template>
   <background-effect></background-effect>
-
   <header-component></header-component>
+
   <main>
     <router-view></router-view>
   </main>
@@ -86,7 +86,7 @@ html {
 }
 
 body {
-  /* font-family: "Kumbh Sans", sans-serif; */
+  font-family: "Bebas Neue", sans-serif;
   font-size: var(--font-size-name-stats);
   text-align: center;
   color: var(--prim-color-v-dark-desa-blue);

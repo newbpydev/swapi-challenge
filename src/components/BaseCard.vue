@@ -43,11 +43,11 @@ export default {
     };
   },
 
-  watch: {
-    cardObj(val) {
-      console.log(val);
-    },
-  },
+  // watch: {
+  //   cardObj(val) {
+  //     console.log(val);
+  //   },
+  // },
 
   computed: {
     // category() {

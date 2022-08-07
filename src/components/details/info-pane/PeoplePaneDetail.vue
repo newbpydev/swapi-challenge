@@ -60,6 +60,11 @@ export default {
   mounted() {
     // console.log(extraction.getCategory(this.homeworld));
   },
+
+  beforeRouteEnter: (to, from, next) => {
+    console.log("💥💥from people before route enter");
+    console.log({ to, from, next });
+  },
 };
 </script>
 

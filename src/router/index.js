@@ -8,6 +8,7 @@ import DetailsView from "@/views/DetailsView";
 import GStore from "@/store";
 
 import StarWarsService from "@/services/StarWarsService";
+// import extraction from "@/utils/extraction";
 
 //# ROUTES         |
 const routes = [
@@ -16,32 +17,25 @@ const routes = [
     path: "/",
     name: "HomeView",
     component: HomeView,
-    // beforeEnter: async (to) => {
-    //   console.log(to);
-    //   const res = await StarWarsService.getRoot();
-    //   GStore.menu = Object.keys(res.data);
-    // },
   },
   {
     //* ResultsView
     path: "/:type",
     name: "ResultsView",
     component: ResultsView,
-
-    // props: true,
-    beforeEnter: (to) => {
+    props: (route) => ({ page: parseInt(route.query.page) || 1 }),
+    beforeEnter: (to, from) => {
       console.log("💥💥 /type beforeEnter");
-      return StarWarsService.getAll(to.params.type)
+      console.log({ to, from });
+      return StarWarsService.getAll(to.params.type, to.query.page || 1)
         .then((response) => {
           GStore.results = response.data;
-          // console.log(GStore);
+
+          console.log(GStore, response.data);
         })
         .catch((error) => {
           console.log(error);
         });
-    },
-    beforeUpdate() {
-      console.log("⭐⭐ /type beforeUpdate");
     },
   },
   {
@@ -53,10 +47,6 @@ const routes = [
       const res = await StarWarsService.getOne(to.params.type, to.params.id);
       GStore.details = res.data;
 
-      // const homeworldObj = StarWarsService.getName(GStore.details.homeworld);
-      // console.log(homeworldObj, GStore.details.homeworld);
-
-      // GStore.details = { ...GStore.details, homeworldObj };
       // // const hwRes = await StarWarsService.
 
       console.log("⭐⭐ from route details view", GStore.details);

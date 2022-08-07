@@ -1,5 +1,11 @@
 <template>
-  <router-link :to="{ name: 'ResultsView', params: { type: navTitle } }">
+  <router-link
+    :to="{
+      name: 'ResultsView',
+      params: { type: navTitle },
+      query: { page: 1 },
+    }"
+  >
     <li
       :disabled="navTitle === $route.params.type"
       :class="{ active: navTitle === $route.params.type }"

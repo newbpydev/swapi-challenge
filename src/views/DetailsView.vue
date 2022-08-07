@@ -6,6 +6,7 @@
       <planets-pane-detail v-if="routeType === 'planets'"></planets-pane-detail>
       <films-pane-detail v-if="routeType === 'films'"></films-pane-detail>
       <species-pane-detail v-if="routeType === 'species'"></species-pane-detail>
+
       <vehicles-pane-detail
         v-if="routeType === 'vehicles'"
       ></vehicles-pane-detail>
@@ -75,6 +76,8 @@ import VehiclesPaneDetail from "@/components/details/info-pane/VehiclesPaneDetai
 
 import StarshipsPaneDetail from "@/components/details/info-pane/StarshipsPaneDetail";
 
+import StarWarsService from "@/services/StarWarsService";
+
 export default {
   components: {
     ImgDetail,
@@ -103,6 +106,26 @@ export default {
         pilots: this.GStore.details.pilots,
       },
     };
+  },
+
+  beforeRouteUpdate: (to) => {
+    console.log("✨✨✨✨✨✨✨✨✨✨✨✨");
+    // console.log(this.GStore);
+    console.log(to);
+    console.log(to.params.type, to.params.id);
+    return StarWarsService.getOne(to.params.type, to.params.id)
+      .then((response) => {
+        console.log("❌❌❌", response.data);
+        console.log("❌❌❌", this.GStore);
+        this.GStore.details = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+  beforeRouteLeave: (to, from) => {
+    console.log("💚💚💚");
+    console.log(to, from);
   },
 };
 </script>
