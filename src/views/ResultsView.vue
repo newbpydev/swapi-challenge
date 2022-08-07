@@ -80,6 +80,7 @@ export default {
 .pagination-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   margin-top: 4.8rem;
   font-size: 4rem;
