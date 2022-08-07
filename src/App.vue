@@ -107,6 +107,7 @@ body {
   font-size: var(--font-size-name-stats);
   text-align: center;
   color: var(--prim-color-v-dark-desa-blue);
+  background-color: black;
 }
 
 #app {
@@ -151,9 +152,9 @@ li {
 
 /* ! MEDIA: 650px */
 @media (max-width: 40.625em) {
-  #app {
+  /* #app {
     background: black;
-  }
+  } */
 }
 
 /* ! MEDIA: 460px */
