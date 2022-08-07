@@ -27,7 +27,11 @@ functions to update the global storage while going from one route to the other.
 ### Screenshot
 
 ![](./images/screenshot-desktop.png)
-![](./images/screenshot-mobile.png)
+![](./images/screenshot-desktop-details.png)
+![](./images/screenshot-desktop-films.png)
+![](./images/screenshot-desktop-species.png)
+![](./images/screenshot-tablet.png)
+![](./images/screenshot-mobile2.png)
 
 ### Links
 
