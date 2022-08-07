@@ -39,4 +39,33 @@ h1 {
 h2 {
   font-size: 4.8rem;
 }
+
+/* ! MEDIA: 1350px */
+@media (max-width: 84.375em) {
+}
+/* ! MEDIA: 1200px */
+@media (max-width: 78em) {
+}
+
+/* ! MEDIA: 1100px */
+@media (max-width: 68.75em) {
+}
+
+/* ! MEDIA: 890px */
+@media (max-width: 55.625em) {
+  h1 {
+    font-size: 6.4rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
+}
+
+/* ! MEDIA: 650px */
+@media (max-width: 40.625em) {
+}
+
+/* ! MEDIA: 460px */
+@media (max-width: 28.75em) {
+}
 </style>

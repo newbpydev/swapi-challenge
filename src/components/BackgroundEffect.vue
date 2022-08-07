@@ -40,6 +40,9 @@ export default {
 }
 
 .stars {
+  /* background: #000 url(../assets/background-images/stars.png) repeat top
+  center; */
+  /* height: 100vh; */
   background: #000 url(../assets/background-images/stars.png) repeat top center;
   z-index: -11;
 }

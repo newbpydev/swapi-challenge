@@ -61,5 +61,9 @@ ul {
 
 /* ! MEDIA: 460px */
 @media (max-width: 28.75em) {
+  ul {
+    /* justify-content: center; */
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>
