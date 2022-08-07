@@ -131,13 +131,46 @@ export default {
 </script>
 
 <style scoped>
-.details-card {
-  /* background: var(--prim-color-yellow); */
+.details-section {
+  display: flex;
+  justify-content: center;
+}
+/* .details-card {
+  
   background: white;
   border-radius: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
+} */
+
+/* ! MEDIA: 1350px */
+@media (max-width: 84.375em) {
+}
+/* ! MEDIA: 1200px */
+@media (max-width: 78em) {
+}
+
+/* ! MEDIA: 1100px */
+@media (max-width: 68.75em) {
+  /* .details-card {
+    grid-template-columns: repeat(2, 1fr);
+  } */
+}
+
+/* ! MEDIA: 890px */
+@media (max-width: 55.625em) {
+}
+
+/* ! MEDIA: 650px */
+@media (max-width: 40.625em) {
+}
+
+/* ! MEDIA: 460px */
+@media (max-width: 28.75em) {
+  /* .details-section {
+    min-width: 46rem;
+  } */
 }
 </style>
